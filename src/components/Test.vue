@@ -1,8 +1,7 @@
 <template>
     <div class="test">
-        <span v-html="title"></span>
-        <p>{{user.firstName}}</p>
-        <p v-text="user.firstName"></p>
+        <h1>{{title}}</h1>
+        <p v-if="showName">{{user.firstName}}</p>
     </div>
 </template>
 
@@ -11,11 +10,12 @@
         name: 'test',
         data() {
             return {
-                title: '<h1>Hello World</h1>',
+                title: 'Hello World',
                 user: {
                     firstName: 'John',
                     lastName: 'Doe'
-                }
+                },
+                showName: false
             }
         }
     }
