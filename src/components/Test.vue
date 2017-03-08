@@ -2,6 +2,7 @@
     <div class="test">
         <h1>{{title}}</h1>
         <p v-if="showName">{{user.firstName}}</p>
+        <p v-else="showName">Nobody</p>
     </div>
 </template>
 
@@ -15,7 +16,7 @@
                     firstName: 'John',
                     lastName: 'Doe'
                 },
-                showName: false
+                showName: true
             }
         }
     }
