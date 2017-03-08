@@ -1,6 +1,7 @@
 <template>
     <div class="test">
         <h1>{{title}}</h1>
+        <p>{{user.firstName}}</p>
     </div>
 </template>
 
@@ -9,7 +10,11 @@
         name: 'test',
         data() {
             return {
-                title: 'Hello World'
+                title: 'Hello World',
+                user: {
+                    firstName: 'John',
+                    lastName: 'Doe'
+                }
             }
         }
     }
