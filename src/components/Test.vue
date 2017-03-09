@@ -3,6 +3,9 @@
         <h1>{{title}}</h1>
         <p v-if="showName">{{user.firstName}}</p>
         <p v-else="showName">Nobody</p>
+        <ul>
+            <li v-for="item in items">{{item.title}}</li>
+        </ul>
     </div>
 </template>
 
@@ -16,7 +19,12 @@
                     firstName: 'John',
                     lastName: 'Doe'
                 },
-                showName: true
+                showName: true,
+                items: [
+                    {title: 'Item One'},
+                    {title: 'Item two'},
+                    {title: 'Item Three'}
+                ]
             }
         }
     }
@@ -25,3 +33,4 @@
 <style scoped>
 
 </style>
+
